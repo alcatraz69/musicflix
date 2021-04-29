@@ -1,0 +1,60 @@
+.banner_img {
+  background-size: cover;
+  background-image: url("../../Assets/musicpic3.jpg"),
+    linear-gradient(rgba(0, 0, 0, 0.215), rgba(0, 0, 0, 0.6));
+  background-blend-mode: overlay;
+  background-position: center center;
+  color: #fff;
+  object-fit: contain;
+  height: 500px;
+}
+
+.banner_contents {
+  font-family: "Montserrat";
+  margin-left: 250px;
+  padding-top: 90px;
+  height: 190px;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 700;
+  padding-bottom: 0.3rem;
+}
+
+.description {
+  width: 45rem;
+  line-height: 1.5;
+  padding-top: 1rem;
+  font-size: 1.2rem;
+  max-width: 560px;
+  font-weight: 500;
+}
+
+.banner_btn {
+  cursor: pointer;
+  color: #fff;
+  outline: none;
+  border: none;
+  font-weight: 700;
+  border-radius: 0.2vw;
+  padding: 0.5rem 2rem;
+  margin-right: 1rem;
+  background-color: rgba(51, 51, 51, 0.5);
+}
+
+.banner_btn:hover {
+  color: black;
+  background-color: #e6e6e6;
+  transition: all 0.2s;
+}
+
+/* .fade_bottom {
+  height: 13.8rem;
+  background-image: linear-gradient(
+    180deg,
+    transparent,
+    rgba(37, 37, 37, 0.61),
+    #111
+  );
+} */

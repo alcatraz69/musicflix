@@ -1,0 +1,61 @@
+.video-play {
+  padding: 2rem 6rem;
+  display: flex;
+  flex-direction: column;
+  background-color: #111;
+  font-family: "Montserrat";
+}
+
+.video-player {
+  height: 486px;
+}
+
+.video-details {
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.video-details .details-head {
+  border-bottom: 1px solid rgba(78, 78, 78, 0.541);
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem 0 1rem;
+}
+
+.video-details .name {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.video-details .caption {
+  color: rgb(255, 255, 255);
+  line-height: 1.5rem;
+  -webkit-line-clamp: 15;
+  font-size: 0.9rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid rgba(78, 78, 78, 0.541);
+}
+
+.video-details .channel {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.avatar {
+  width: 100px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.btn-trans {
+  background-color: transparent;
+  font-size: 0.8rem;
+  color: var(--gray-300);
+  margin: 0 0 0 10px;
+  min-width: max-content;
+  padding: 0.7rem 1rem;
+  border: none;
+  outline: none;
+  position: relative;
+}

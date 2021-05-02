@@ -1,0 +1,30 @@
+.Wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.Wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.item {
+  border: 1px solid rgb(255, 255, 255);
+  width: 250px;
+  min-width: 110px;
+  flex: 0 0 auto;
+  margin: 25px;
+}
+
+.item img {
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+}
+
+.card_des {
+  color: #fff;
+  margin-left: 20px;
+}

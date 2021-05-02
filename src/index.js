@@ -3,10 +3,18 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import {BrowserRouter} from 'react-router-dom'
+import {VideoContextProvider} from './Store/VideoContext'
+import miragejs from './Api/mock.server'
 
+miragejs()
 ReactDOM.render(
   <React.StrictMode>
+    <VideoContextProvider>
+      <BrowserRouter>
     <App />
+    </BrowserRouter>
+    </VideoContextProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

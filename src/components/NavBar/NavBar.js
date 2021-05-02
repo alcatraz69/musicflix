@@ -1,19 +1,20 @@
 import React from 'react';
 import './NavBar.css'
+import { NavLink} from "react-router-dom";
 
 function NavBar({ showMenu, setShowMenu }) {
 
     return (
         <nav className="nav-bar">
-            <p className="logo">
+            <NavLink to="/" style={{textDecoration:"none"}} className="logo">
                 MusicFlix
-            </p>
+            </NavLink>
             <div className="right-nav">
                 <ul>
-                    <p to="/" className="mobile-hide">Home</p>
-                    <p to="/explore" className="mobile-hide">Explore</p>
-                    <p to="/library" className="mobile-hide">Library</p>
-                    <p to="/account" className="mobile-hide">Account</p>
+                    <NavLink to="/" style={{textDecoration:"none"}} className="mobile-hide">Home</NavLink>
+                    <NavLink to="/explore" style={{textDecoration:"none"}} className="mobile-hide">Explore</NavLink>
+                    <NavLink to="/library" style={{textDecoration:"none"}} className="mobile-hide">Library</NavLink>
+                    <NavLink to="/" style={{textDecoration:"none"}} className="mobile-hide">Account</NavLink>
 
                     <li
                         onClick = {() => setShowMenu(!showMenu)}

@@ -1,9 +1,13 @@
 
 import { useState } from 'react';
 import './App.css';
-import NavBar from './components/NavBar/NavBar'
-import SideBar from './components/SideBar/SideBar'
-import Banner from './components/Banner/Banner'
+import { Switch, Route} from "react-router-dom";
+import NavBar from './Components/NavBar/NavBar'
+import SideBar from './Components/SideBar/SideBar'
+import MainPage from './Components/MaiPage/MainPage'
+import Explore from "./Components/Explore/Explore"
+import Library from './Components/Library/Library'
+import VideoPlayer from './Components/VideoPlayer/VideoPlayer'
 
 function App() {
 
@@ -12,7 +16,13 @@ function App() {
     <div className="App">
       <NavBar setShowMenu={setShowMenu} showMenu={showMenu} />
       <SideBar setShowMenu={setShowMenu} showMenu={showMenu} />
-      <Banner/>
+      <Switch>
+      <Route  path="/library"  component={Library } />
+        <Route  path="/explore"  component={Explore } />
+        <Route  path="/watch/:videoID"  component={VideoPlayer } />
+        <Route  path="/"  component={MainPage } />
+      </Switch>
+      
     </div>
   );
 }

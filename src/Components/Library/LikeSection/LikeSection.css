@@ -1,0 +1,4 @@
+.grid-box {
+  display: flex;
+  flex-wrap: wrap;
+}

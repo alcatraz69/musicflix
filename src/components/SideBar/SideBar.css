@@ -31,6 +31,8 @@
   font-weight: 300;
   font-size: 0.9rem;
   padding: 1rem;
+  color: #fff;
+  text-decoration: none;
 }
 
 @media screen and (max-width: 578px) {

@@ -7,7 +7,7 @@ import PlaylistModal from '../PlaylistModal/PlaylistModal'
 import './VideoPlayer.css'
 import { MdThumbUp } from "react-icons/md";
 import { MdPlaylistAdd } from "react-icons/md";
-
+import {successToast} from '../Toast/toast'
 
 
 
@@ -50,12 +50,12 @@ export default function VideoPlayer() {
                     dispatch({
                         type: "REMOVE_FROM_LIKES",
                         payload: video.id,
-                      })
+                      },successToast("removed from liked videos"))
                     : 
                   dispatch({
                     type: "ADD_TO_LIKES",
                     payload: video.id,
-                  })
+                  },successToast("Added to liked videos"))
                   
               } }
               />

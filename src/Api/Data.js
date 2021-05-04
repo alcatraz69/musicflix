@@ -81,7 +81,7 @@ export const initialData = [
     },
     {
         id: "et9hU7QMDYU",
-        title: "Character Design",
+        title: "How To Play Drums ",
         category: "Drum Course | Beginners",
         url : "Drum Course",
         thumbnail: "https://i.ytimg.com/vi/et9hU7QMDYU/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDH5eh8MavoyEFNABSEZpjTUWoNNA",

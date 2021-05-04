@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 
 import {useContext} from 'react'
 import {VideoContext} from '../../Store/VideoContext'
-
+import {successToast} from '../Toast/toast'
 import './PlaylistModal.css'
 
 function PlaylistModal({ videoID,showModal, setShowModal }) {
@@ -27,10 +27,10 @@ function PlaylistModal({ videoID,showModal, setShowModal }) {
 
     function checkBoxHandler(item) {
         if (searchPlaylistsForID(item.videosID, videoID) === true) {
-            dispatch({ type: "REMOVE_FROM_PLAYLIST", payload: { name: item.name, id: videoID } })
+            dispatch({ type: "REMOVE_FROM_PLAYLIST", payload: { name: item.name, id: videoID } },successToast("Removed from Playlist"))
            
         } else {
-            dispatch({ type: "ADD_TO_PLAYLIST", payload: { name: item.name, id: videoID } })
+            dispatch({ type: "ADD_TO_PLAYLIST", payload: { name: item.name, id: videoID } },successToast("Added to Playlist"))
             
         }
     }

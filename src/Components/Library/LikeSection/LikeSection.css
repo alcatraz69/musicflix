@@ -3,3 +3,9 @@
   flex-wrap: wrap;
   margin: 20px;
 }
+
+@media screen and (max-width: 586px) {
+  .like-box {
+    margin: 0;
+  }
+}

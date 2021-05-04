@@ -19,7 +19,7 @@
   }
 }
 
-@media screen and (max-width: 426px) {
+@media screen and (max-width: 586px) {
   .wrapper {
     padding: 1rem;
   }

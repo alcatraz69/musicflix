@@ -36,11 +36,12 @@
   color: var(--white-100);
   outline: none;
   border: none;
-  font-weight: 700;
+  font-weight: 500;
   border-radius: 0.2vw;
   padding: 0.5rem 2rem;
   margin-right: 1rem;
   background-color: rgba(51, 51, 51, 0.5);
+  text-decoration: none;
 }
 
 .banner_btn:hover {
@@ -71,5 +72,16 @@
     font-size: 0.9rem;
     max-width: 560px;
     font-weight: 500;
+  }
+  .banner_btn {
+    color: black;
+    background-color: #e6e6e6;
+    outline: none;
+    border: none;
+    font-weight: 500;
+    border-radius: 0.5vw;
+    padding: 0.3rem 1.2rem;
+    margin-right: 1rem;
+    text-decoration: none;
   }
 }

@@ -4,6 +4,12 @@
   flex-wrap: nowrap;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
+  font-family: "Montserrat";
+  margin: 0 25px;
+}
+
+.Trending_Txt {
+  font-family: "Montserrat";
 }
 
 .Wrapper::-webkit-scrollbar {
@@ -11,7 +17,6 @@
 }
 
 .item {
-  border: 1px solid rgb(255, 255, 255);
   width: 250px;
   min-width: 110px;
   flex: 0 0 auto;
@@ -25,6 +30,6 @@
 }
 
 .card_des {
-  color: #fff;
-  margin-left: 20px;
+  color: var(--white-100);
+  margin-left: 0;
 }

@@ -1,4 +1,5 @@
-.grid-box {
+.like-box {
   display: flex;
   flex-wrap: wrap;
+  margin: 20px;
 }

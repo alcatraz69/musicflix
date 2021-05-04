@@ -35,14 +35,44 @@ export const VideoContextProvider=({children})=>{
                     likedVideos:state.likedVideos.filter(video=>video.id!==action.payload),
                     videos:state.videos.map(video=>video.id===action.payload?{...video,inLikes:false}:video)
                 };
-                default:
-                    return state;
+            case "ADD_NEW_PLAYLIST":
+                return{
+                    ...state,
+                    playlist:  [...state.playlist, { name : action.payload, videosID : [] }] 
+                    
+                };
+            case "ADD_TO_PLAYLIST":
+                return {...state, 
+                    playlist: state.playlist.map((currentPlaylist) => {
+                        if (currentPlaylist.name === action.payload.name) {
+                            return { ...currentPlaylist, videosID: [...currentPlaylist.videosID, action.payload.id] }
+                        } else {
+                            return currentPlaylist
+                        }
+                    })
+                };
+            case "REMOVE_FROM_PLAYLIST":
+                return {
+                    ...state,
+                    playlist: state.playlist.map((currentPlaylist) => {
+                        if (currentPlaylist.name === action.payload.name) {
+                            return {...currentPlaylist, videosID: currentPlaylist.videosID.filter(item => item !== action.payload.id)}
+                        } else {
+                            return currentPlaylist
+                        }
+                    })
+                };
+            case "DELETE_PLAYLIST":
+                return { ...state, playlist: state.playlist.filter(currentPlaylist => currentPlaylist.name !== action.payload.name) }
+            default:
+                return state;
             }
         }
 
         const [state,dispatch]=useReducer(videoListManipulation,{
             videos:[],
-            likedVideos:[]
+            likedVideos:[],
+            playlist:[]
             
         })
 
@@ -51,7 +81,8 @@ export const VideoContextProvider=({children})=>{
             value={{
                 videos:state.videos,
                 likedVideos:state.likedVideos,
-                dispatch:dispatch
+                dispatch:dispatch,
+                playlist:state.playlist
             
                 
             }}

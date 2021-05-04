@@ -1,4 +1,22 @@
 .cards {
-  margin: 40px 20px;
-  color: #fff;
+  margin: 60px 20px;
+  color: var(--white-100);
+}
+
+.card-image {
+  width: 18rem;
+}
+
+.card-title {
+  margin-top: 10px;
+}
+
+@media screen and (max-width: 586px) {
+  .card-image {
+    width: 25rem;
+  }
+
+  .cards {
+    margin: 20px 20px;
+  }
 }

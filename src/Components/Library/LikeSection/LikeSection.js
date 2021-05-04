@@ -10,17 +10,17 @@ export default function LikeSection() {
     return (
         <div>
         <h1 className="section-title">
-            Liked Series
+            Liked Videos :
         </h1>
         {
             likedVideos.length === 0 &&
-            <div className="grid-box">
-                Nothing to show here!
+            <div className="like-box">
+                No liked videos!
             </div>
         }
         {
             likedVideos.length !== 0 &&
-            <div className="grid-box">
+            <div className="like-box">
                 {
                     likedVideos.map(({id,title,category,thumbnail,channelName,description}) => {
                         return (

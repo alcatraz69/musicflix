@@ -1,14 +1,16 @@
 import React from 'react'
 import ReactPlayer from 'react-player'
 import {useParams} from 'react-router-dom'
-import {useContext} from 'react'
+import {useContext,useState} from 'react'
 import {VideoContext} from '../../Store/VideoContext'
+import PlaylistModal from '../PlaylistModal/PlaylistModal'
 import './VideoPlayer.css'
 
 
 export default function VideoPlayer() {
     const {videos,dispatch} = useContext(VideoContext)
     const { videoID } = useParams();
+    const [showModal, setShowModal] = useState(false);
     
     const video = videos.find((one) => one.id === videoID)
     
@@ -29,6 +31,7 @@ export default function VideoPlayer() {
                 {video.title}
             </div>
             <div className="button-group">
+
                 <button
                   className="btn-trans"  
                   onClick={() => {video.inLikes?
@@ -47,13 +50,15 @@ export default function VideoPlayer() {
                   
               } }
                 >
-                    LIKE
+                    {!video.inLikes?"LIKE":"LIKED"}
                 </button>
                 <button
+                onClick={()=>setShowModal(true)}
                     className="btn-trans" 
                 >
                     ADD TO PLAYLIST
                 </button>
+                <PlaylistModal videoID={video.id} showModal={showModal} setShowModal={setShowModal} />
                 
             </div>
             

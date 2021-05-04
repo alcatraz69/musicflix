@@ -12,7 +12,7 @@ ReactDOM.render(
   <React.StrictMode>
     <VideoContextProvider>
       <BrowserRouter>
-    <App />
+       <App />
     </BrowserRouter>
     </VideoContextProvider>
   </React.StrictMode>,

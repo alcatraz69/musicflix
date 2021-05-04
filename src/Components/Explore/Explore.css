@@ -2,5 +2,19 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  background-color: #111;
+  padding: 0 30px;
+  font-family: "Montserrat";
+}
+
+.explore_txt {
+  color: var(--white-100);
+  align-self: center;
+  margin-top: 60px;
+  font-size: xx-large;
+}
+
+@media screen and (max-width: 526px) {
+  .Explore {
+    padding: 0;
+  }
 }

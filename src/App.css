@@ -1,17 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap");
 
 :root {
-  --yellow-500: #ffd21d;
-  --yellow-600: #e7b236;
-  --gray-900: #28282d;
-  --gray-800: #2b2b31;
+  --blue-800: #38b6ff;
+  --gray-light: #28282d;
+  --gray-dark: #111;
   --gray-300: rgba(255, 255, 255, 0.75);
   --white-100: #fff;
-  --blue-800: #38b6ff;
-}
-
-.app {
-  font-family: "Montserrat", sans-serif;
 }
 
 ::-webkit-scrollbar {
@@ -31,4 +25,9 @@
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
+}
+
+body {
+  background-color: var(--gray-dark);
+  font-family: "Montserrat", sans-serif;
 }

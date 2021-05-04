@@ -8,7 +8,12 @@ import { NavLink } from 'react-router-dom'
 export default function Explore() {
     const {videos} = useContext(VideoContext)
     return (
+        < div style={{display:"flex",flexDirection:"column"}}>
+        <div className="explore_txt">
+                All Videos
+            </div>
         <div className="Explore">
+            
             {videos.map(({id,title,category,thumbnail,channelName,description}) => (
                <NavLink style={{textDecoration:"none"}} to={`/watch/${id}`}><Videocard 
                 key={id}
@@ -21,6 +26,7 @@ export default function Explore() {
                 />
                 </NavLink>
             ))}
+        </div>
         </div>
     )
 }

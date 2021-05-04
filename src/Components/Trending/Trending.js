@@ -1,7 +1,11 @@
 import React from 'react'
 import './Trending.css'
+import {useContext} from 'react'
+import {VideoContext} from '../../Store/VideoContext'
+
 
 export default function Trending() {
+    const {videos} = useContext(VideoContext)
 
     
     return (
@@ -10,57 +14,22 @@ export default function Trending() {
             <h1 className="Trending_Txt" style={{margin:"40px 30px",borderBottom:"2px solid",color:"#fff"}}>Trending videos</h1>
         
         <div className="Wrapper">
-            <div className="item">
-                <img src="https://i.ytimg.com/vi/2g9reiuzm40/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD0KsWHK5bBS_m7n_MStppw-_S-nA" alt=""/>
+
+            {videos.map((video)=>{
+                return(
+                <div className="item">
+                <img src={video.thumbnail} alt=""/>
                 <div className="card_des">
-                    <p>Video One</p>
-                    <p>Lorem Ipsum dorem firolu</p>
+                    <p>{video.title}</p>
+                    {/* <p>Lorem Ipsum dorem firolu</p> */}
                 </div>
             </div>
-            <div className="item">
-            <img src="https://i.ytimg.com/vi/2g9reiuzm40/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD0KsWHK5bBS_m7n_MStppw-_S-nA" alt=""/>
-            <div className="card_des">
-                    <p>Video One</p>
-                    <p>Lorem Ipsum dorem firolu</p>
-                </div>
-            </div>
-            <div className="item">
-            <img src="https://i.ytimg.com/vi/2g9reiuzm40/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD0KsWHK5bBS_m7n_MStppw-_S-nA" alt=""/>
-            <div className="card_des">
-                    <p>Video One</p>
-                    <p>Lorem Ipsum dorem firolu</p>
-                </div>
-            </div>
-            <div className="item">
-            <img src="https://i.ytimg.com/vi/2g9reiuzm40/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD0KsWHK5bBS_m7n_MStppw-_S-nA" alt=""/>
-            <div className="card_des">
-                    <p>Video One</p>
-                    <p>Lorem Ipsum dorem firolu</p>
-                </div>
-            </div>
-            <div className="item">
-            <img src="https://i.ytimg.com/vi/2g9reiuzm40/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD0KsWHK5bBS_m7n_MStppw-_S-nA" alt=""/>
-            <div className="card_des">
-                    <p>Video One</p>
-                    <p>Lorem Ipsum dorem firolu</p>
-                </div>
-            </div>
-            <div className="item">
-            <img src="https://i.ytimg.com/vi/2g9reiuzm40/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD0KsWHK5bBS_m7n_MStppw-_S-nA" alt=""/>
-            <div className="card_des">
-                    <p>Video One</p>
-                    <p>Lorem Ipsum dorem firolu</p>
-                </div>
-            </div>
-            <div className="item">
-            <img src="https://i.ytimg.com/vi/2g9reiuzm40/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD0KsWHK5bBS_m7n_MStppw-_S-nA" alt=""/>
-            <div className="card_des">
-                    <p>Video One</p>
-                    <p>Lorem Ipsum dorem firolu</p>
-                </div>
-            </div>
+                )
+            })}
+
         </div>
         </div>
         
     )
 }
+

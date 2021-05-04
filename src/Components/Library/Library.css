@@ -1,8 +1,6 @@
 .library-page {
-  color: #fff;
-  font-family: "", sans-serif;
-
-  background-color: #111;
+  color: var(--white-100);
+  font-family: "Montserrat", sans-serif;
 }
 
 .wrapper {
@@ -11,6 +9,8 @@
 
 .divider {
   background-color: rgb(92, 92, 92);
+  height: 2px;
+  margin: 10px 0;
 }
 
 @media screen and (max-width: 768px) {

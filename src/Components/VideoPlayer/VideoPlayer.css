@@ -2,7 +2,7 @@
   padding: 2rem 6rem;
   display: flex;
   flex-direction: column;
-  background-color: #111;
+
   font-family: "Montserrat";
 }
 
@@ -11,7 +11,7 @@
 }
 
 .video-details {
-  color: #fff;
+  color: var(--white-100);
   margin-bottom: 1rem;
 }
 
@@ -28,7 +28,7 @@
 }
 
 .video-details .caption {
-  color: rgb(255, 255, 255);
+  color: var(--white-100);
   line-height: 1.5rem;
   -webkit-line-clamp: 15;
   font-size: 0.9rem;
@@ -43,7 +43,7 @@
 }
 
 .avatar {
-  width: 100px;
+  width: 70px;
   border-radius: 50%;
   margin-right: 20px;
 }
@@ -51,11 +51,73 @@
 .btn-trans {
   background-color: transparent;
   font-size: 0.8rem;
-  color: var(--gray-300);
+  color: var(--white-100);
   margin: 0 0 0 10px;
   min-width: max-content;
   padding: 0.7rem 1rem;
   border: none;
   outline: none;
   position: relative;
+}
+
+@media screen and (max-width: 1024px) {
+  .video-play {
+    flex-direction: column;
+  }
+
+  .video-details {
+    margin: 1rem 0;
+  }
+
+  .video-details .name {
+    font-size: 1.5rem;
+
+    margin-bottom: 1rem;
+  }
+
+  .video-details {
+    border-bottom: 1px solid rgba(78, 78, 78, 0.541);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .video-play {
+    padding: 2rem;
+  }
+
+  .video-details .channel .avatar {
+    display: block;
+  }
+
+  .video-player {
+    height: 60vw;
+  }
+}
+
+@media screen and (max-width: 426px) {
+  .video-play {
+    padding: 1rem;
+  }
+
+  .video-details .name {
+    font-size: 1.2rem;
+    font-weight: 300;
+  }
+
+  .video-details .details-head {
+    flex-direction: column;
+    align-items: unset;
+    margin-top: 0.5rem;
+    padding-bottom: 0;
+  }
+
+  .button-group {
+    width: 100%;
+    text-align: right;
+  }
+
+  .btn-trans {
+    font-size: 0.8rem;
+    padding: 0.5rem;
+  }
 }

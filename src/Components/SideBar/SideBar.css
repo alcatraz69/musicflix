@@ -1,0 +1,49 @@
+.side-bar-bg {
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: var(--grey-dark);
+  opacity: 0;
+  transition: 0.3s ease;
+  transition-property: opacity visibility;
+}
+
+.side-bar {
+  position: fixed;
+  top: 70px;
+  left: 0;
+  width: 280px;
+  height: 100vh;
+  background-color: var(--gray-light);
+  border-top: 2px solid var(--blue-800);
+  color: var(--gray-300);
+  padding: 1rem;
+  transform: translate(-100%, 0);
+  transition: transform 0.3s ease;
+}
+.side-bar .nav-link {
+  display: block;
+  text-transform: uppercase;
+  list-style: none;
+  font-weight: 300;
+  font-size: 0.9rem;
+  padding: 1rem;
+  color: var(--white-100);
+  text-decoration: none;
+}
+
+@media screen and (max-width: 578px) {
+  .side-bar-bg.show {
+    visibility: visible;
+    display: block;
+    opacity: 1;
+  }
+
+  .side-bar.view {
+    transform: translateX(0);
+    transition: transform 0.3s ease;
+  }
+}

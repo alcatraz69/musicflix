@@ -1,0 +1,93 @@
+.nav-bar {
+  color: var(--white-100);
+  background-color: var(--gray-light);
+  padding: 0rem 6rem;
+  box-shadow: 0 5px 25px 0 rgb(0 0 0 / 30%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 3;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  height: 71px;
+  font-family: "Montserrat";
+}
+
+.logo {
+  color: var(--blue-800);
+  font-weight: 500;
+  font-size: 1.5rem;
+  padding: 0.5rem 2rem;
+  width: max-content;
+  transition: background-color 0.5s ease;
+  cursor: pointer;
+}
+
+.logo span {
+  color: var(--white-100);
+}
+
+.right-nav {
+  width: 31%;
+}
+
+.right-nav svg:hover {
+  fill: var(--blue-800);
+}
+
+.right-nav ul {
+  display: flex;
+  align-items: center;
+}
+
+li {
+  list-style: none;
+}
+
+.right-nav .mobile-hide {
+  list-style: none;
+  padding: 0 0 0 2rem;
+  font-size: 0.9rem;
+  color: var(--white-100);
+  cursor: pointer;
+  transition: color 0.3s ease;
+  font-weight: 500;
+}
+
+.right-nav .mobile-hide:hover {
+  color: var(--blue-800);
+}
+
+.mobile-show {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .nav-bar {
+    padding: 0 2rem;
+  }
+
+  .logo {
+    padding: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 578px) {
+  .nav-bar {
+    padding: 0 1rem;
+  }
+  .logo {
+    padding: 1rem;
+  }
+  .mobile-hide {
+    display: none;
+  }
+
+  .mobile-show {
+    display: block;
+  }
+  .right-nav {
+    width: 15%;
+  }
+}

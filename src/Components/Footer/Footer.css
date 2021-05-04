@@ -1,0 +1,26 @@
+.footer {
+  background-color: var(--gray-light);
+  min-height: 7rem;
+  width: 100%;
+  padding: 1.5rem;
+  color: var(--white-100);
+  font-size: 1.2rem;
+  box-sizing: border-box;
+  font-family: "Montserrat";
+  text-align: center;
+}
+
+.socialLinks,
+.footerHeader {
+  margin: 10px 0;
+}
+
+.icon {
+  color: var(--white-100);
+  margin: 10px;
+}
+
+.footerEnd {
+  font-size: small;
+  font-weight: 200;
+}

@@ -7,6 +7,7 @@ import SideBar from './Components/SideBar/SideBar'
 import MainPage from './Components/MaiPage/MainPage'
 import Explore from "./Components/Explore/Explore"
 import Library from './Components/Library/Library'
+import Footer from './Components/Footer/Footer'
 import VideoPlayer from './Components/VideoPlayer/VideoPlayer'
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
         <Route  path="/watch/:videoID"  component={VideoPlayer } />
         <Route  path="/"  component={MainPage } />
       </Switch>
+      <Footer/>
       
     </div>
   );

@@ -14,7 +14,7 @@ function PlaylistSec() {
                 Playlists :
             </h1>
             {playlist.length === 0 && 
-               <div className="grid-box">
+               <div className="box" style={{margin:"125px 0"}}>
                No playlists available!
            </div>
             }

@@ -5,6 +5,11 @@ import {useContext,useState} from 'react'
 import {VideoContext} from '../../Store/VideoContext'
 import PlaylistModal from '../PlaylistModal/PlaylistModal'
 import './VideoPlayer.css'
+import { MdThumbUp } from "react-icons/md";
+import { MdPlaylistAdd } from "react-icons/md";
+
+
+
 
 
 export default function VideoPlayer() {
@@ -31,17 +36,21 @@ export default function VideoPlayer() {
                 {video.title}
             </div>
             <div className="button-group">
+                <div className="iconpad">
+                 <MdThumbUp
+                color={
+                    video.inLikes
+                    ? "#2563eb"
+                    : "white"
+                }
+                size="1.5rem"
 
-                <button
-                  className="btn-trans"  
-                  onClick={() => {video.inLikes?
+                onClick={() => {video.inLikes?
                   
                     dispatch({
                         type: "REMOVE_FROM_LIKES",
                         payload: video.id,
                       })
-                      
-                    
                     : 
                   dispatch({
                     type: "ADD_TO_LIKES",
@@ -49,15 +58,16 @@ export default function VideoPlayer() {
                   })
                   
               } }
-                >
-                    {!video.inLikes?"LIKE":"LIKED"}
-                </button>
-                <button
+              />
+              </div>
+                <div className="iconpad">
+                <MdPlaylistAdd size="2.2rem"
                 onClick={()=>setShowModal(true)}
                     className="btn-trans" 
-                >
-                    ADD TO PLAYLIST
-                </button>
+                
+                    />
+                </div>
+                
                 <PlaylistModal videoID={video.id} showModal={showModal} setShowModal={setShowModal} />
                 
             </div>

@@ -76,7 +76,7 @@ function PlaylistModal({ videoID,showModal, setShowModal }) {
                         type="text"
                         placeholder="New PlayList.."
                     />
-                    <button type="submit" >ADD</button>
+                    <button type="submit" >CREATE</button>
                 </form>
             </div>
             {/* <Toast toast={toast} setToast={setToast} /> */}

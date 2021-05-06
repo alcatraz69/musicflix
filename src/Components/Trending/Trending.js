@@ -2,6 +2,7 @@ import React from 'react'
 import './Trending.css'
 import {useContext} from 'react'
 import {VideoContext} from '../../Store/VideoContext'
+import{NavLink} from 'react-router-dom'
 
 
 export default function Trending() {
@@ -17,13 +18,14 @@ export default function Trending() {
 
             {videos.map((video)=>{
                 return(
+                <NavLink style={{textDecoration:"none"}} to={`/watch/${video.id}`}>
                 <div className="item">
-                <img src={video.thumbnail} alt=""/>
-                <div className="card_des">
-                    <p>{video.title}</p>
-                    {/* <p>Lorem Ipsum dorem firolu</p> */}
+                    <img src={video.thumbnail} alt=""/>
+                    <div className="card_des">
+                    <p>{video.title}</p>      
+                    </div>
                 </div>
-            </div>
+                </NavLink>
                 )
             })}
 

@@ -28,6 +28,7 @@ export default function VideoPlayer() {
                         controls
                         url={`https://www.youtube.com/watch?v=${video.id}`}
                     />
+                    
 
         </div>
         <div className="video-details">

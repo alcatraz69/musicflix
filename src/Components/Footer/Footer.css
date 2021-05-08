@@ -10,8 +10,8 @@
   text-align: center;
 }
 
-.socialLinks,
-.footerHeader {
+.social-links,
+.footer-header {
   margin: 10px 0;
 }
 
@@ -20,7 +20,7 @@
   margin: 10px;
 }
 
-.footerEnd {
+.footer-end {
   font-size: small;
   font-weight: 200;
 }

@@ -53,6 +53,7 @@ li {
   cursor: pointer;
   transition: color 0.3s ease;
   font-weight: 500;
+  text-decoration: none;
 }
 
 .right-nav .mobile-hide:hover {

@@ -12,7 +12,7 @@ export default function Explore() {
         <div className="explore_txt">
                 All Videos
             </div>
-        <div className="Explore">
+        <div className="explore">
             
             {videos.map(({id,title,category,thumbnail,channelName,description}) => (
                <NavLink style={{textDecoration:"none"}} to={`/watch/${id}`}><Videocard 

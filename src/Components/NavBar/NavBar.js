@@ -13,10 +13,10 @@ function NavBar({ showMenu, setShowMenu }) {
             </NavLink>
             <div className="right-nav">
                 <ul>
-                    <NavLink to="/" style={{textDecoration:"none"}} className="mobile-hide">Home</NavLink>
-                    <NavLink to="/explore" style={{textDecoration:"none"}} className="mobile-hide">Explore</NavLink>
-                    <NavLink to="/library" style={{textDecoration:"none"}} className="mobile-hide">Library</NavLink>
-                    <NavLink to="/" style={{textDecoration:"none"}} className="mobile-hide">Account</NavLink>
+                    <NavLink to="/"  className="mobile-hide">Home</NavLink>
+                    <NavLink to="/explore"  className="mobile-hide">Explore</NavLink>
+                    <NavLink to="/library"  className="mobile-hide">Library</NavLink>
+                    <NavLink to="/"  className="mobile-hide">Account</NavLink>
 
                     <li
                         onClick = {() => setShowMenu(!showMenu)}

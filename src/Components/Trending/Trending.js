@@ -11,8 +11,8 @@ export default function Trending() {
     
     return (
         
-        <div className="Trending_Body" style={{backgroundColor:"#111",paddingTop:"1px"}}>
-            <h1 className="Trending_Txt" style={{margin:"40px 30px",borderBottom:"2px solid",color:"#fff"}}>Trending videos</h1>
+        <div className="trending_body" style={{backgroundColor:"#111",paddingTop:"1px"}}>
+            <h1 className="trending_txt" style={{margin:"40px 30px",borderBottom:"2px solid",color:"#fff"}}>Trending videos</h1>
         
         <div className="Wrapper">
 

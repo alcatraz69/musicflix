@@ -1,6 +1,5 @@
 .Wrapper {
   display: flex;
-
   flex-wrap: nowrap;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
@@ -8,7 +7,7 @@
   margin: 0 25px;
 }
 
-.Trending_Txt {
+.trending_txt {
   font-family: "Montserrat";
 }
 

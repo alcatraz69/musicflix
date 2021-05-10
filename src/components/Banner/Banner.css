@@ -1,6 +1,6 @@
 .banner_img {
   background-size: cover;
-  background-image: url("../../Assets/musicpic3.jpg"),
+  background-image: url("../../Assets/mp3.jpg"),
     linear-gradient(rgba(0, 0, 0, 0.215), rgba(0, 0, 0, 0.6));
   background-blend-mode: overlay;
   background-position: center center;

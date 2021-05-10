@@ -26,7 +26,7 @@ export default function VideoPlayer() {
                         width="100%"
                         height="100%"
                         controls
-                        url={`https://www.youtube.com/watch?v=${video.id}`}
+                        url={`https://www.youtube.com/watch?v=${video?.id}`}
                     />
                     
 
@@ -34,28 +34,28 @@ export default function VideoPlayer() {
         <div className="video-details">
         <div className="details-head">
             <div className="name">
-                {video.title}
+                {video?.title}
             </div>
             <div className="button-group">
                 <div className="iconpad">
                  <MdThumbUp
                 color={
-                    video.inLikes
+                    video?.inLikes
                     ? "#2563eb"
                     : "white"
                 }
                 size="1.5rem"
 
-                onClick={() => {video.inLikes?
+                onClick={() => {video?.inLikes?
                   
                     dispatch({
                         type: "REMOVE_FROM_LIKES",
-                        payload: video.id,
+                        payload: video?.id,
                       },successToast("removed from liked videos"))
                     : 
                   dispatch({
                     type: "ADD_TO_LIKES",
-                    payload: video.id,
+                    payload: video?.id,
                   },successToast("Added to liked videos"))
                   
               } }
@@ -69,18 +69,18 @@ export default function VideoPlayer() {
                     />
                 </div>
                 
-                <PlaylistModal videoID={video.id} showModal={showModal} setShowModal={setShowModal} />
+                <PlaylistModal videoID={video?.id} showModal={showModal} setShowModal={setShowModal} />
                 
             </div>
             
         </div>
         <div className="channel">
             <img
-                src={video.channelImage} alt="avatar" className="avatar sm" />
-            {video.channelName}
+                src={video?.channelImage} alt="avatar" className="avatar sm" />
+            {video?.channelName}
         </div>
         <div className="caption">
-            {video.description}
+            {video?.description}
         </div>
     </div>
     </div>

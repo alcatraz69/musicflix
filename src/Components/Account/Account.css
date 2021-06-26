@@ -8,3 +8,15 @@
   width: 15rem;
   border-radius: 50%;
 }
+
+.logout_btn {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  font-weight: 500;
+  border-radius: 0.2vw;
+  padding: 0.5rem 2rem;
+  text-decoration: none;
+  color: black;
+  background-color: #e6e6e6;
+}

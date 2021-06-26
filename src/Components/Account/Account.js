@@ -19,7 +19,7 @@ const Account = () => {
 
       <p className="account_name">{authState.name}</p>
       <p className="account_email">{authState.email}</p>
-      <button onClick={logOutHandler} className="btn btn-invert">
+      <button onClick={logOutHandler} className="logout_btn">
         LOG OUT
       </button>
     </div>

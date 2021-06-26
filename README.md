@@ -2,9 +2,9 @@
 
 ## Description -
 
-Dove is a Video Library for students aspiring to be Graphic Designers, 2D Animation Artists or 3D Modelling Artists. Dove has the best tutorials playlists, curated from Youtube, listed in the form of Courses, to help everyone follow a definite path, that offer video series of all levels of difficulty. Dove also provides a feature for jotting down notes, while watching the video.
+MusicFlix is a Video Library for people who wanna learn how to play musical instruments and expand their knowledge about music. MusicFLix has the best tutorials playlists, curated from Youtube, to help everyone follow a definite path, that offer video series of all levels of difficulty.
 
-Dove also provides users the best experience, as they can Sign In on the Website, and like their favorite videos and add them to multiple playlists at once. And last but not least, Dove is fully responsive, for it's mobile users' convenience.
+MusicFLix also provides users the best experience, as they can Sign In on the Website, and like their favorite videos and add them to multiple playlists at once. And last but not least, MusicFlix is fully responsive, for it's mobile users convenience.
 
 ## Live Demo -
 

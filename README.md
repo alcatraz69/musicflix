@@ -19,13 +19,21 @@ Or you can signup and create a new ID.
 
 ## Technologies Used -
 
-1. HTML, CSS & React Js
-2. sparrow designs component library
-3. React Router
-4. Repl.it for API server.
-5. NodeJs, ExpressJS for backend.
+1. HTML, CSS & React Js.
+2. React Router.
+3. Context API for state management
+4. NodeJs, ExpressJS for backend.
+5. MongoDB for Database.
 6. JWT for authorization
 7. bcrypt for Password hashing.
-8. Netlify for hosting the static server.
+8. Netlify and Heroku for hosting the App.
 
 ## Screenshots -
+
+![](images/musicflix.JPG)
+----
+----
+![](images/mfa.JPG)
+----
+----
+![](images/musicflixmobil.JPG)

@@ -20,4 +20,7 @@
   .playlist-box-head {
     justify-content: space-between;
   }
+  .plist-box {
+    grid-template-columns: 1fr;
+  }
 }

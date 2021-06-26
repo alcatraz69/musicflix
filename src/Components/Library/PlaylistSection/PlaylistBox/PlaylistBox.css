@@ -11,6 +11,11 @@
   fill: var(--white-100);
 }
 
+.plist-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
 @media screen and (max-width: 768px) {
   .playlist-box-head {
     justify-content: space-between;

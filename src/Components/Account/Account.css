@@ -1,0 +1,10 @@
+.account {
+  min-height: 80vh;
+  text-align: center;
+  color: var(--white-100);
+}
+
+.usericon {
+  width: 15rem;
+  border-radius: 50%;
+}

@@ -1,11 +1,12 @@
 .like-box {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
 @media screen and (max-width: 586px) {
   .like-box {
     margin: 0;
+    grid-template-columns: 1fr;
+    width: 100%;
   }
 }

@@ -40,6 +40,7 @@
     visibility: visible;
     display: block;
     opacity: 1;
+    z-index: 1;
   }
 
   .side-bar.view {

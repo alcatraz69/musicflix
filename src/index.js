@@ -1,22 +1,22 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-import {BrowserRouter} from 'react-router-dom'
-import {VideoContextProvider} from './Store/VideoContext'
-import miragejs from './Api/mock.server'
-
-miragejs()
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import { BrowserRouter } from "react-router-dom";
+import { VideoContextProvider } from "./Store/VideoContext";
+import { AuthContextProvider } from "./Store/AuthContext";
 ReactDOM.render(
   <React.StrictMode>
-    <VideoContextProvider>
-      <BrowserRouter>
-       <App />
-    </BrowserRouter>
-    </VideoContextProvider>
+    <AuthContextProvider>
+      <VideoContextProvider>
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
+      </VideoContextProvider>
+    </AuthContextProvider>
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
 
 // If you want to start measuring performance in your app, pass a function

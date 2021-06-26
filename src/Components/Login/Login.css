@@ -77,3 +77,19 @@ input:-webkit-autofill:active {
   text-decoration: none;
   cursor: pointer;
 }
+
+.pass-wrapper {
+  position: relative;
+  display: flex;
+}
+
+i {
+  position: absolute;
+  top: 24%;
+  right: 8%;
+  font-size: large;
+  color: rgb(219, 219, 219);
+}
+i:hover {
+  cursor: pointer;
+}

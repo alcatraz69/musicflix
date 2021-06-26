@@ -3,11 +3,13 @@ import "./Login.css";
 import { register, login } from "../../Api/index";
 import { useHistory } from "react-router-dom";
 import { useAuth } from "../../Store/AuthContext";
+import PasswordField from "./PasswordField";
 
 const Login = () => {
   const { authDispatch } = useAuth();
   const history = useHistory();
   const [toggle, setToggle] = useState(false);
+
   const [userData, setUserData] = useState({
     name: "",
     email: "",
@@ -87,19 +89,17 @@ const Login = () => {
               placeholder="Email address"
               onChange={handleChange}
             />
-            <input
+            <PasswordField
               name="password"
               value={userData.password}
-              type="password"
-              placeholder="Password"
-              onChange={handleChange}
+              onChangeHandler={handleChange}
+              placeholderText="Password"
             />
-            <input
+            <PasswordField
               name="cpassword"
               value={userData.cpassword}
-              type="password"
-              placeholder="Confirm Password"
-              onChange={handleChange}
+              onChangeHandler={handleChange}
+              placeholderText="Confirm Password"
             />
             <button onClick={handleClick}>create</button>
             <p className="message">
@@ -115,15 +115,14 @@ const Login = () => {
               placeholder="Email"
               onChange={handleChange}
             />
-            <input
+            <PasswordField
               name="password"
               value={userData.password}
-              type="password"
-              placeholder="Password"
-              onChange={handleChange}
+              onChangeHandler={handleChange}
+              placeholderText="Password"
             />
             {errorMsg ? (
-              <p style={{ color: "red" }}>Invalid Credentials</p>
+              <p style={{ color: "red" }}>Invalid Credentials!</p>
             ) : (
               ""
             )}

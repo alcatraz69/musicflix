@@ -3,9 +3,10 @@ import "./Trending.css";
 import { useContext } from "react";
 import { VideoContext } from "../../Store/VideoContext";
 import { NavLink } from "react-router-dom";
+import Skeleton from "../Skeleton/Skeleton";
 
 export default function Trending() {
-  const { videos } = useContext(VideoContext);
+  const { videos, isLoading } = useContext(VideoContext);
 
   return (
     <div
@@ -24,22 +25,26 @@ export default function Trending() {
       </h1>
 
       <div className="Wrapper">
-        {videos.map((video) => {
-          return (
-            <NavLink
-              style={{ textDecoration: "none" }}
-              to={`/watch/${video.id}`}
-              key={video.id}
-            >
-              <div className="item">
-                <img src={video.thumbnail} alt="" />
-                <div className="card_des">
-                  <p>{video.title}</p>
+        {isLoading ? (
+          <Skeleton COUNT={5} />
+        ) : (
+          videos.map((video) => {
+            return (
+              <NavLink
+                style={{ textDecoration: "none" }}
+                to={`/watch/${video.id}`}
+                key={video.id}
+              >
+                <div className="item">
+                  <img src={video.thumbnail} alt="" />
+                  <div className="card_des">
+                    <p>{video.title}</p>
+                  </div>
                 </div>
-              </div>
-            </NavLink>
-          );
-        })}
+              </NavLink>
+            );
+          })
+        )}
       </div>
     </div>
   );

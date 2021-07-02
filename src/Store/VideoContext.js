@@ -1,4 +1,4 @@
-import { createContext, useEffect, useReducer } from "react";
+import { createContext, useEffect, useReducer, useState } from "react";
 import { fetchVideos, getLikedVideos, getPlaylists } from "../Api/index";
 import { useAuth } from "./AuthContext";
 export const VideoContext = createContext();
@@ -7,7 +7,11 @@ export const VideoContextProvider = ({ children }) => {
   const {
     authState: { authToken },
   } = useAuth();
+
+  const [isLoading, setIsLoading] = useState(true);
+
   const getAllVideos = async () => {
+    setIsLoading(true);
     try {
       const data = await fetchVideos();
       dispatch({
@@ -17,6 +21,7 @@ export const VideoContextProvider = ({ children }) => {
     } catch (err) {
       console.log(err);
     }
+    setIsLoading(false);
   };
 
   useEffect(() => {
@@ -193,6 +198,8 @@ export const VideoContextProvider = ({ children }) => {
         likedVideos: state.likedVideos,
         dispatch: dispatch,
         playlist: state.playlist,
+        isLoading,
+        setIsLoading,
       }}
     >
       {children}

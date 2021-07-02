@@ -3,19 +3,21 @@ import { useContext } from "react";
 import { VideoContext } from "../../../Store/VideoContext";
 import { NavLink } from "react-router-dom";
 import Videocard from "../../VideoCard/Videocard";
+import Skeleton from "../../Skeleton/Skeleton";
 import "./LikeSection.css";
 
 export default function LikeSection() {
-  const { likedVideos } = useContext(VideoContext);
+  const { likedVideos, isLoading } = useContext(VideoContext);
   return (
     <div>
       <h1 className="section-title">Liked Videos :</h1>
-      {likedVideos.length === 0 && (
-        <div className="like-box">No liked videos!</div>
-      )}
-      {likedVideos.length !== 0 && (
-        <div className="like-box">
-          {likedVideos?.map((vid) => {
+      <div className="like-box">
+        {isLoading ? (
+          <Skeleton COUNT={4} />
+        ) : likedVideos.length === 0 ? (
+          <div className="like-box">No liked videos!</div>
+        ) : (
+          likedVideos?.map((vid) => {
             return (
               <NavLink
                 style={{ textDecoration: "none" }}
@@ -32,9 +34,9 @@ export default function LikeSection() {
                 />
               </NavLink>
             );
-          })}
-        </div>
-      )}
+          })
+        )}
+      </div>
     </div>
   );
 }

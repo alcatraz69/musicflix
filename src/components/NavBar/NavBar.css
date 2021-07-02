@@ -1,6 +1,6 @@
 .nav-bar {
   color: var(--white-100);
-  background-color: var(--gray-800);
+  background-color: var(--gray-light);
   padding: 0rem 6rem;
   box-shadow: 0 5px 25px 0 rgb(0 0 0 / 30%);
   display: flex;
@@ -11,6 +11,7 @@
   position: -webkit-sticky;
   top: 0;
   height: 71px;
+  font-family: "Montserrat";
 }
 
 .logo {
@@ -19,26 +20,17 @@
   font-size: 1.5rem;
   padding: 0.5rem 2rem;
   width: max-content;
+  margin-left: -80px;
   transition: background-color 0.5s ease;
   cursor: pointer;
 }
-
-/* .logo:hover {
-  background-color: var(--gray-800);
-} */
 
 .logo span {
   color: var(--white-100);
 }
 
-.right-nav svg {
-  height: 20px;
-  width: 20px;
-  background-color: var(--gray-900);
-  fill: var(--white-100);
-  border-radius: 50%;
-  margin-top: 5px;
-  transition: fill 0.3s ease;
+.right-nav {
+  width: 24%;
 }
 
 .right-nav svg:hover {
@@ -57,12 +49,12 @@ li {
 .right-nav .mobile-hide {
   list-style: none;
   padding: 0 0 0 2rem;
-  text-transform: uppercase;
   font-size: 0.9rem;
-  color: var(--gray-300);
+  color: var(--white-100);
   cursor: pointer;
   transition: color 0.3s ease;
   font-weight: 500;
+  text-decoration: none;
 }
 
 .right-nav .mobile-hide:hover {
@@ -80,6 +72,7 @@ li {
 
   .logo {
     padding: 0.5rem;
+    margin-left: 0;
   }
 }
 
@@ -89,6 +82,7 @@ li {
   }
   .logo {
     padding: 1rem;
+    margin-left: 0;
   }
   .mobile-hide {
     display: none;
@@ -96,5 +90,8 @@ li {
 
   .mobile-show {
     display: block;
+  }
+  .right-nav {
+    width: 15%;
   }
 }

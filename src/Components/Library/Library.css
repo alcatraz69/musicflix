@@ -1,0 +1,26 @@
+.library-page {
+  color: var(--white-100);
+  font-family: "Montserrat", sans-serif;
+}
+
+.wrapper {
+  padding: 2rem 6rem;
+}
+
+.divider {
+  background-color: rgb(92, 92, 92);
+  height: 2px;
+  margin: 10px 0;
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper {
+    padding: 2rem;
+  }
+}
+
+@media screen and (max-width: 586px) {
+  .wrapper {
+    padding: 1rem;
+  }
+}

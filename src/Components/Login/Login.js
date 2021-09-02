@@ -42,7 +42,6 @@ const Login = () => {
           cpassword,
         });
       } else {
-        console.log("here");
         user = await login({
           email,
           password,
@@ -67,6 +66,10 @@ const Login = () => {
       setErrorMsg(true);
     }
     setIsLoading(false);
+  };
+
+  const addTestCredentials = () => {
+    setUserData({ ...userData, email: "prem@gmail.com", password: "qwerty" });
   };
   return (
     <div className="login-page">
@@ -133,6 +136,16 @@ const Login = () => {
             <p className="message">
               Not registered?{" "}
               <span onClick={handleToggle}>Create an account</span>
+            </p>
+            <p className="testCredentials-btn">
+              Click{" "}
+              <span
+                className="testCredentials-link"
+                onClick={addTestCredentials}
+              >
+                here
+              </span>{" "}
+              to use test credentials
             </p>
           </form>
         )}

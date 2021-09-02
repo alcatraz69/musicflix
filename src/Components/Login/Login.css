@@ -70,7 +70,7 @@ input:-webkit-autofill:active {
 .form .message {
   margin: 15px 0 0;
   color: #b3b3b3;
-  font-size: 12px;
+  font-size: 14px;
 }
 .form .message span {
   color: var(--blue-800);
@@ -92,4 +92,13 @@ i {
 }
 i:hover {
   cursor: pointer;
+}
+
+.testCredentials-btn {
+  color: #b3b3b3;
+}
+.testCredentials-link {
+  color: #fff;
+  cursor: pointer;
+  text-decoration: underline;
 }

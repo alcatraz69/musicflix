@@ -4,11 +4,13 @@ import { register, login } from "../../Api/index";
 import { useHistory } from "react-router-dom";
 import { useAuth } from "../../Store/AuthContext";
 import PasswordField from "./PasswordField";
+import { Loader } from "../Loader/Loader";
 
 const Login = () => {
   const { authDispatch } = useAuth();
   const history = useHistory();
   const [toggle, setToggle] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   const [userData, setUserData] = useState({
     name: "",
@@ -29,6 +31,7 @@ const Login = () => {
   const handleClick = async (e) => {
     e.preventDefault();
     const { name, email, password, cpassword } = userData;
+    setIsLoading(true);
     try {
       let user;
       if (toggle) {
@@ -45,9 +48,6 @@ const Login = () => {
           password,
         });
       }
-
-      console.log(user.data.result);
-      console.log(user.data.token);
 
       if (user.status === 200) {
         toggle
@@ -66,6 +66,7 @@ const Login = () => {
       console.log(err);
       setErrorMsg(true);
     }
+    setIsLoading(false);
   };
   return (
     <div className="login-page">
@@ -126,7 +127,9 @@ const Login = () => {
             ) : (
               ""
             )}
-            <button onClick={handleClick}>login</button>
+            <button onClick={handleClick}>
+              {isLoading ? <Loader /> : "Login"}
+            </button>
             <p className="message">
               Not registered?{" "}
               <span onClick={handleToggle}>Create an account</span>
